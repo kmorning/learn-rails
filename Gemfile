@@ -1,8 +1,14 @@
 source 'https://rubygems.org'
 
 # Specify Ruby version to help with automated deploy scripts.
-ruby '2.0.0'
+ruby '2.1.3'
 
+##############################################################################
+# 
+# Rails defaults
+#
+##############################################################################
+#
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
@@ -39,4 +45,39 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+#
+##############################################################################
+#
+# learn-rails
+#
+##############################################################################
+#
+#
+# activerecord-tableless - helps to use Rails without a database
+gem 'activerecord-tableless'
+# foundation-rails - front-end framework 
+gem 'foundation-rails'
+# gibbon - access to the MailChimp API
+gem 'gibbon'
+# google_drive - use Google Drive spreadsheets for data storage
+gem 'google_drive'
+# high_voltage - for static pages like "about"
+gem 'high_voltage'
+# simple_form - forms made easy
+gem 'simple_form'
+
+#############################################################################
+#
+# development - utilities that make development easier
+#
+# ###########################################################################
+# 
+group :development do
+  # better_errors - helps when things go wrong
+  gem 'better_errors'
+  # quiet_assets - suppresses distracting messages in the log
+  gem 'quiet_assets'
+  # rails_layout - generates files for an application layout 
+  gem 'rails_layout'
+end
 
