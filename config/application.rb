@@ -21,3 +21,6 @@ module LearnRails
     # config.i18n.default_locale = :de
   end
 end
+
+require 'learn_rails'
+

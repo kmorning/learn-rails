@@ -1,5 +1,7 @@
 class Owner
 
+  Debug_format = "\033[1;34;40m[DEBUG]\033[0m "
+
   def name
     name = 'Foobar Kadigan'
   end
@@ -9,6 +11,7 @@ class Owner
   end
 
   def countdown
+    LearnRails.debug 'entering Owner countdown method'
     today = Date.today
     birthday = Date.new( today.year, birthdate.month, birthdate.day )
     if birthday > today
