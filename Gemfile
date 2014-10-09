@@ -61,6 +61,8 @@ gem 'foundation-rails'
 gem 'gibbon'
 # google_drive - use Google Drive spreadsheets for data storage
 gem 'google_drive'
+# oath - used to login into google drive securely
+gem 'oauth2'
 # high_voltage - for static pages like "about"
 gem 'high_voltage'
 # simple_form - forms made easy
