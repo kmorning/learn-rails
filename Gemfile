@@ -12,7 +12,7 @@ ruby '2.1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -79,8 +79,11 @@ gem 'simple_form'
 # development - utilities that make development easier
 #
 # ###########################################################################
-# 
+ 
 group :development do
+  # Use sqlite3 as the database for Active Record.  Heroku doesn't
+  # support SQLite, so we use this in development only.
+  gem 'sqlite3'
   # better_errors - helps when things go wrong
   gem 'better_errors'
   # quiet_assets - suppresses distracting messages in the log
@@ -88,4 +91,21 @@ group :development do
   # rails_layout - generates files for an application layout 
   gem 'rails_layout'
 end
+
+#############################################################################
+# 
+# production - deployment to Heroku
+#
+# ###########################################################################
+
+group :production do
+  # We're not using a database at the moment, but we must include
+  # PostgreSQL gem for Heroku
+  gem 'pg'
+  # Thin web server - easy to use and requires no configuration
+  gem 'thin'
+  # logging and static assets(CSS & JavaScript)
+  gem 'rails_12factor'
+end
+
 
