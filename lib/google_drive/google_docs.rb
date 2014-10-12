@@ -26,7 +26,8 @@ module GoogleDrive
         :scope => 
           "https://docs.google.com/feeds/ " +
           "https://docs.googleusercontent.com/ " +
-          "https://spreadsheets.google.com/feeds/" )
+          "https://spreadsheets.google.com/feeds/" +
+          "https://mail.google.com/")
     end
 
   end

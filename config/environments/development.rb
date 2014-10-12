@@ -16,20 +16,25 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   #config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: Rails.application.secrets.domain_name,
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: Rails.application.secrets.email_provider_username,
-    password: Rails.application.secrets.email_provider_password
-  }
+#  config.action_mailer.smtp_settings = {
+#    address: "smtp.gmail.com",
+#    port: 587,
+#    domain: Rails.application.secrets.domain_name,
+#    authentication: "plain",
+#    enable_starttls_auto: true,
+#    user_name: Rails.application.secrets.email_provider_username,
+#    password: Rails.application.secrets.email_provider_password
+#  }
 
   # ActionMailer config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :action_gmailer
   config.action_mailer.raise_delivery_errors = true
+
+  # ActionGMailer config
+  config.action_mailer.action_gmailer_settings = {
+    account: Rails.application.secrets.email_provider_username
+  }
 
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true

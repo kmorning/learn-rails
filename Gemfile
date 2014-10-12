@@ -63,6 +63,12 @@ gem 'gibbon'
 gem 'google_drive'
 # oath - used to login into google drive securely
 gem 'oauth2'
+# Google API client
+gem 'google-api-client'
+# Gmail OAuth2
+gem 'action-gmailer'
+# REST Client ? simple DSL for accessing HTTP and REST resources
+gem 'rest-client'
 # high_voltage - for static pages like "about"
 gem 'high_voltage'
 # simple_form - forms made easy

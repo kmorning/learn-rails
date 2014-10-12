@@ -5,6 +5,8 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+require 'action_gmailer'
+#require 'google/api_client'
 
 module LearnRails
   class Application < Rails::Application
