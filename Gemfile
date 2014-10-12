@@ -62,9 +62,9 @@ gem 'gibbon'
 # google_drive - use Google Drive spreadsheets for data storage
 gem 'google_drive'
 # oath - used to login into google drive securely
-gem 'oauth2'
+#gem 'oauth2'
 # Google API client
-gem 'google-api-client'
+#gem 'google-api-client'
 # Gmail OAuth2
 gem 'action-gmailer'
 # REST Client ? simple DSL for accessing HTTP and REST resources
